@@ -155,9 +155,10 @@ def parcear(ruta):
                 
                 cadenas.append(linea)
         except Exception as e:
+            print("--------------------------------------------------------------------------------------------")
+            print("Error en la linea: ", contador + 1, ":")
             print(e)
-            print("Error en la linea: ", contador + 1)
-            continue
+            print("--------------------------------------------------------------------------------------------")
     
     print("Lineas procesadas: ", contador)
     print("Total a pagar: $", total_pagar)  
