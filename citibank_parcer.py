@@ -196,7 +196,9 @@ def write_file(cadenas, totales):
 #lee todos los archivos de la carpeta
 def read_all_files(ruta):
    
- 
+    count_files_read = 0
+    files_read = []
+    
     files = os.listdir(ruta)
     for file in files:
         file_path = os.path.join(ruta, file)
@@ -207,6 +209,12 @@ def read_all_files(ruta):
             cadenas, total_pagar = parcear(file_path)
             totales = get_totales(cadenas, total_pagar)
             write_file(cadenas, totales)
+            count_files_read += 1
+            files_read.append(file)
+    
+    print("\nArchivos procesados: ", count_files_read, "\n")
+    for file in files_read:
+        print("-",file)
            
     return
 ruta ="FICHEROS DE PAGO"
