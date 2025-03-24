@@ -36,9 +36,9 @@ def determinar_tipo_cuenta(cuenta):
    
     cuenta = str(cuenta).lower()
 
-    if cuenta == "cuenta corriente" or cuenta == "cuenta vista":
+    if cuenta == "cuenta corriente" or cuenta == "cuenta vista" or cuenta == "1":
         return "01"
-    elif cuenta == "cuenta de ahorro":
+    elif cuenta == "cuenta de ahorro" or cuenta == "2":
         return "02"
     else:
         return "03"
